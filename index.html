@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c112d95bc9c0f244ab7c025346b857c0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, sans-serif; margin: 20px 0;">NYC Pharmacy Map</h1>
+    
+    
+            <div class="folium-map" id="map_c112d95bc9c0f244ab7c025346b857c0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c112d95bc9c0f244ab7c025346b857c0 = L.map(
+                "map_c112d95bc9c0f244ab7c025346b857c0",
+                {
+                    center: [40.7527, -73.9772],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b381476f340af16c0b310b418252c6c3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c112d95bc9c0f244ab7c025346b857c0);
+        
+    
+            var feature_group_728109b7e603824e94d4b7943450af73 = L.featureGroup(
+                {}
+            ).addTo(map_c112d95bc9c0f244ab7c025346b857c0);
+        
+    
+            var marker_60dc08074d1b1f85f51b1f9e26102fc0 = L.marker(
+                [40.75785, -73.96761],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_c854da6cd8ab7f59de67cbf177692656 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_60dc08074d1b1f85f51b1f9e26102fc0.setIcon(icon_c854da6cd8ab7f59de67cbf177692656);
+        
+    
+        var popup_99ec542db916aea4908f42f1763c9cfd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_411f9135775abdecccad41d67d2f9199 = $(`<div id="html_411f9135775abdecccad41d67d2f9199" style="width: 100.0%; height: 100.0%;"><strong>Meds Pharmacy</strong><br>1104 2nd Ave, New York, NY 10022<br>212-371-6000</div>`)[0];
+            popup_99ec542db916aea4908f42f1763c9cfd.setContent(html_411f9135775abdecccad41d67d2f9199);
+        
+
+        marker_60dc08074d1b1f85f51b1f9e26102fc0.bindPopup(popup_99ec542db916aea4908f42f1763c9cfd)
+        ;
+
+        
+    
+    
+            marker_60dc08074d1b1f85f51b1f9e26102fc0.bindTooltip(
+                `<div>
+                     Meds Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c43ee801d24d15a61b312b8f4c31e7ae = L.marker(
+                [40.75535, -73.97271],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_0a2be9438b4f6eb441a9b3bed8b7e190 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c43ee801d24d15a61b312b8f4c31e7ae.setIcon(icon_0a2be9438b4f6eb441a9b3bed8b7e190);
+        
+    
+        var popup_3d9c98da838d8fdc43df022d100f7ba8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8abeffa85e957ed35cf8544d6913e15 = $(`<div id="html_e8abeffa85e957ed35cf8544d6913e15" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>51st St and Lexington Ave, New York, NY 10022<br>212-207-8274</div>`)[0];
+            popup_3d9c98da838d8fdc43df022d100f7ba8.setContent(html_e8abeffa85e957ed35cf8544d6913e15);
+        
+
+        marker_c43ee801d24d15a61b312b8f4c31e7ae.bindPopup(popup_3d9c98da838d8fdc43df022d100f7ba8)
+        ;
+
+        
+    
+    
+            marker_c43ee801d24d15a61b312b8f4c31e7ae.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1a66be3de5a07dd312602746a8143a1 = L.marker(
+                [40.75023, -73.98561],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_851784a89c65b0b15831e890e343fef6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b1a66be3de5a07dd312602746a8143a1.setIcon(icon_851784a89c65b0b15831e890e343fef6);
+        
+    
+        var popup_0a528599e53a405c9a1e3fff7c8c03ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ffb4537baa353115a49921376eba222 = $(`<div id="html_9ffb4537baa353115a49921376eba222" style="width: 100.0%; height: 100.0%;"><strong>Capsule Pharmacy</strong><br>20 W 36th St, New York, NY 10018<br>212-675-3900</div>`)[0];
+            popup_0a528599e53a405c9a1e3fff7c8c03ca.setContent(html_9ffb4537baa353115a49921376eba222);
+        
+
+        marker_b1a66be3de5a07dd312602746a8143a1.bindPopup(popup_0a528599e53a405c9a1e3fff7c8c03ca)
+        ;
+
+        
+    
+    
+            marker_b1a66be3de5a07dd312602746a8143a1.bindTooltip(
+                `<div>
+                     Capsule Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7181509a2f2721fb19d74c3b703970a = L.marker(
+                [40.76814, -73.96066],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_c5eacf5bcdb4adee73f2dc46bef5864c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a7181509a2f2721fb19d74c3b703970a.setIcon(icon_c5eacf5bcdb4adee73f2dc46bef5864c);
+        
+    
+        var popup_bacab3e0ab114ad710650c0a71108a91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bfa1ae8fcf16a16a47df9e7d071197f = $(`<div id="html_8bfa1ae8fcf16a16a47df9e7d071197f" style="width: 100.0%; height: 100.0%;"><strong>Eisler Chemists</strong><br>1140 Lexington Ave, New York, NY 10021<br>212-744-4144</div>`)[0];
+            popup_bacab3e0ab114ad710650c0a71108a91.setContent(html_8bfa1ae8fcf16a16a47df9e7d071197f);
+        
+
+        marker_a7181509a2f2721fb19d74c3b703970a.bindPopup(popup_bacab3e0ab114ad710650c0a71108a91)
+        ;
+
+        
+    
+    
+            marker_a7181509a2f2721fb19d74c3b703970a.bindTooltip(
+                `<div>
+                     Eisler Chemists
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a17f9b9e9b8ba175f41834470a40866c = L.marker(
+                [40.78088, -73.95436],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_d38177bc13e751015cbbd446193b0576 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a17f9b9e9b8ba175f41834470a40866c.setIcon(icon_d38177bc13e751015cbbd446193b0576);
+        
+    
+        var popup_3771b8d3668b33b247dd043d52fc9d3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_476ecca1fb56ed8acf1e543b1149f9f6 = $(`<div id="html_476ecca1fb56ed8acf1e543b1149f9f6" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>1235 Lexington Ave, New York, NY 10028<br>212-570-2710</div>`)[0];
+            popup_3771b8d3668b33b247dd043d52fc9d3c.setContent(html_476ecca1fb56ed8acf1e543b1149f9f6);
+        
+
+        marker_a17f9b9e9b8ba175f41834470a40866c.bindPopup(popup_3771b8d3668b33b247dd043d52fc9d3c)
+        ;
+
+        
+    
+    
+            marker_a17f9b9e9b8ba175f41834470a40866c.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b870f9b7181eb806893945e1a8f70b0 = L.marker(
+                [40.77971, -73.95522],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_ddedfc55c3ccc790ed82630a911bdb8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3b870f9b7181eb806893945e1a8f70b0.setIcon(icon_ddedfc55c3ccc790ed82630a911bdb8e);
+        
+    
+        var popup_c60085481212ca1091d85e2c8530a222 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a2232080ebf046d136055a941f77f4b = $(`<div id="html_4a2232080ebf046d136055a941f77f4b" style="width: 100.0%; height: 100.0%;"><strong>Caligor Pharmacy</strong><br>1226 Lexington Ave, New York, NY 10028<br>212-369-6000</div>`)[0];
+            popup_c60085481212ca1091d85e2c8530a222.setContent(html_4a2232080ebf046d136055a941f77f4b);
+        
+
+        marker_3b870f9b7181eb806893945e1a8f70b0.bindPopup(popup_c60085481212ca1091d85e2c8530a222)
+        ;
+
+        
+    
+    
+            marker_3b870f9b7181eb806893945e1a8f70b0.bindTooltip(
+                `<div>
+                     Caligor Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_250539e3e95c13c8f4ec46622070b613 = L.marker(
+                [40.78452, -73.95238],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_ad8b5f600714cc8a5cd94e43d2fa7adc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_250539e3e95c13c8f4ec46622070b613.setIcon(icon_ad8b5f600714cc8a5cd94e43d2fa7adc);
+        
+    
+        var popup_6494e26b216b60c33752a2f73faba05b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1981a4a28fb480cecba1be3f23a3254d = $(`<div id="html_1981a4a28fb480cecba1be3f23a3254d" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>1294 Lexington Ave, New York, NY 10128<br>212-996-3000</div>`)[0];
+            popup_6494e26b216b60c33752a2f73faba05b.setContent(html_1981a4a28fb480cecba1be3f23a3254d);
+        
+
+        marker_250539e3e95c13c8f4ec46622070b613.bindPopup(popup_6494e26b216b60c33752a2f73faba05b)
+        ;
+
+        
+    
+    
+            marker_250539e3e95c13c8f4ec46622070b613.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a9719351b6efd038316500cdb8d34b93 = L.marker(
+                [40.77026, -73.95746],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_1a01de852ae726393fb178a182ca6c57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a9719351b6efd038316500cdb8d34b93.setIcon(icon_1a01de852ae726393fb178a182ca6c57);
+        
+    
+        var popup_ec4ac1a5c5ff3cb992cae93190677e7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90c544cd1510e628ad1a45547c72a401 = $(`<div id="html_90c544cd1510e628ad1a45547c72a401" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>1396 2nd Ave, New York, NY 10021<br>212-249-5699</div>`)[0];
+            popup_ec4ac1a5c5ff3cb992cae93190677e7b.setContent(html_90c544cd1510e628ad1a45547c72a401);
+        
+
+        marker_a9719351b6efd038316500cdb8d34b93.bindPopup(popup_ec4ac1a5c5ff3cb992cae93190677e7b)
+        ;
+
+        
+    
+    
+            marker_a9719351b6efd038316500cdb8d34b93.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3d7b1281e3402e4f5d8bd3c6b4b8461 = L.marker(
+                [40.76867, -73.95922],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_3da4c2abbf6abee2b4f4d371d099d5a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e3d7b1281e3402e4f5d8bd3c6b4b8461.setIcon(icon_3da4c2abbf6abee2b4f4d371d099d5a8);
+        
+    
+        var popup_0084066174b11a7d7143dd572ff55638 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6710139e41a1e7b3b76b0408143ae6d4 = $(`<div id="html_6710139e41a1e7b3b76b0408143ae6d4" style="width: 100.0%; height: 100.0%;"><strong>Rx Exclusive</strong><br>1229 3rd Ave, New York, NY 10021<br>212-249-1050</div>`)[0];
+            popup_0084066174b11a7d7143dd572ff55638.setContent(html_6710139e41a1e7b3b76b0408143ae6d4);
+        
+
+        marker_e3d7b1281e3402e4f5d8bd3c6b4b8461.bindPopup(popup_0084066174b11a7d7143dd572ff55638)
+        ;
+
+        
+    
+    
+            marker_e3d7b1281e3402e4f5d8bd3c6b4b8461.bindTooltip(
+                `<div>
+                     Rx Exclusive
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fec58e1e1f30f841ebc240b1c04afbc3 = L.marker(
+                [40.77132, -73.94927],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_c0373dce2e5889409e5e24088b64711f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fec58e1e1f30f841ebc240b1c04afbc3.setIcon(icon_c0373dce2e5889409e5e24088b64711f);
+        
+    
+        var popup_93587edae8713efab7650a4d876e5b1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c620e421977a6440f68c6d4fa8de88e4 = $(`<div id="html_c620e421977a6440f68c6d4fa8de88e4" style="width: 100.0%; height: 100.0%;"><strong>Health Wise Pharmacy</strong><br>1494 York Ave, New York, NY 10075<br>212-472-5600</div>`)[0];
+            popup_93587edae8713efab7650a4d876e5b1a.setContent(html_c620e421977a6440f68c6d4fa8de88e4);
+        
+
+        marker_fec58e1e1f30f841ebc240b1c04afbc3.bindPopup(popup_93587edae8713efab7650a4d876e5b1a)
+        ;
+
+        
+    
+    
+            marker_fec58e1e1f30f841ebc240b1c04afbc3.bindTooltip(
+                `<div>
+                     Health Wise Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17c7393e60f647c558fe488d337ae433 = L.marker(
+                [40.7715, -73.94913],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_b46a9d2d908dc7ce006e0a8524f11f36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_17c7393e60f647c558fe488d337ae433.setIcon(icon_b46a9d2d908dc7ce006e0a8524f11f36);
+        
+    
+        var popup_a10c3b61d3dc44ca2625fae24ed59f68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e20dc640dca3878ac2d906701df3171 = $(`<div id="html_9e20dc640dca3878ac2d906701df3171" style="width: 100.0%; height: 100.0%;"><strong>Walgreens Pharmacy</strong><br>1498 York Ave, New York, NY 10075<br>212-879-8990</div>`)[0];
+            popup_a10c3b61d3dc44ca2625fae24ed59f68.setContent(html_9e20dc640dca3878ac2d906701df3171);
+        
+
+        marker_17c7393e60f647c558fe488d337ae433.bindPopup(popup_a10c3b61d3dc44ca2625fae24ed59f68)
+        ;
+
+        
+    
+    
+            marker_17c7393e60f647c558fe488d337ae433.bindTooltip(
+                `<div>
+                     Walgreens Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fce9eec39e67534f76035ff943fc646d = L.marker(
+                [40.79177, -73.94709],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_8e9699420124f5f73c24aed1ba330c9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fce9eec39e67534f76035ff943fc646d.setIcon(icon_8e9699420124f5f73c24aed1ba330c9f);
+        
+    
+        var popup_59fa18d361f071c5a6b8ed225c79fd3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b71258d9536a857c3ea7f41bd104da4 = $(`<div id="html_6b71258d9536a857c3ea7f41bd104da4" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>1500 Lexington Ave, New York, NY 10029<br>212-289-3846</div>`)[0];
+            popup_59fa18d361f071c5a6b8ed225c79fd3d.setContent(html_6b71258d9536a857c3ea7f41bd104da4);
+        
+
+        marker_fce9eec39e67534f76035ff943fc646d.bindPopup(popup_59fa18d361f071c5a6b8ed225c79fd3d)
+        ;
+
+        
+    
+    
+            marker_fce9eec39e67534f76035ff943fc646d.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_49f7c6b2b90f2e38b107b9517f1e5b4a = L.marker(
+                [40.7943, -73.94298],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_1893956a666163f13947484722bdd50c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_49f7c6b2b90f2e38b107b9517f1e5b4a.setIcon(icon_1893956a666163f13947484722bdd50c);
+        
+    
+        var popup_408478cec2d54b31ebc49ddbfdc7f542 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_379e121b562d3765f7c2978769391a36 = $(`<div id="html_379e121b562d3765f7c2978769391a36" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>1915 3rd Ave, New York, NY 10029<br>917-492-1038</div>`)[0];
+            popup_408478cec2d54b31ebc49ddbfdc7f542.setContent(html_379e121b562d3765f7c2978769391a36);
+        
+
+        marker_49f7c6b2b90f2e38b107b9517f1e5b4a.bindPopup(popup_408478cec2d54b31ebc49ddbfdc7f542)
+        ;
+
+        
+    
+    
+            marker_49f7c6b2b90f2e38b107b9517f1e5b4a.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27aebf5fc89bb8964299643d7a7bef32 = L.marker(
+                [40.78827, -73.94319],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_af53bf359e7334f8d4bc91149d721874 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_27aebf5fc89bb8964299643d7a7bef32.setIcon(icon_af53bf359e7334f8d4bc91149d721874);
+        
+    
+        var popup_7fc514ae794dae4fe907ecd158d52922 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb4bfed06c4d83c538a305bf67d432aa = $(`<div id="html_fb4bfed06c4d83c538a305bf67d432aa" style="width: 100.0%; height: 100.0%;"><strong>Metro RX</strong><br>300 E 102nd St, New York, NY 10029<br>212-831-1222</div>`)[0];
+            popup_7fc514ae794dae4fe907ecd158d52922.setContent(html_fb4bfed06c4d83c538a305bf67d432aa);
+        
+
+        marker_27aebf5fc89bb8964299643d7a7bef32.bindPopup(popup_7fc514ae794dae4fe907ecd158d52922)
+        ;
+
+        
+    
+    
+            marker_27aebf5fc89bb8964299643d7a7bef32.bindTooltip(
+                `<div>
+                     Metro RX
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5fe791c32440f022dde614589a74812e = L.marker(
+                [40.78902, -73.97092],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_0309a2b11a1b16f1b7fce869876d49e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5fe791c32440f022dde614589a74812e.setIcon(icon_0309a2b11a1b16f1b7fce869876d49e3);
+        
+    
+        var popup_726f37ea1344c9a3e91e861053570dc6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd506628a3792a75e3c2d623e7e7b037 = $(`<div id="html_cd506628a3792a75e3c2d623e7e7b037" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>609 Columbus Ave, New York, NY 10024<br>212-724-4270</div>`)[0];
+            popup_726f37ea1344c9a3e91e861053570dc6.setContent(html_cd506628a3792a75e3c2d623e7e7b037);
+        
+
+        marker_5fe791c32440f022dde614589a74812e.bindPopup(popup_726f37ea1344c9a3e91e861053570dc6)
+        ;
+
+        
+    
+    
+            marker_5fe791c32440f022dde614589a74812e.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4618d44bd73337030dfbe675a96260d1 = L.marker(
+                [40.79125, -73.97255],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_c66e9d94efbeae46a68414986e128378 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4618d44bd73337030dfbe675a96260d1.setIcon(icon_c66e9d94efbeae46a68414986e128378);
+        
+    
+        var popup_14dfde6e9d334f3e699d4bb9e3904c9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07189dabceee0ecd25d5e24079578b63 = $(`<div id="html_07189dabceee0ecd25d5e24079578b63" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>743 Amsterdam Ave, New York, NY 10025<br>212-280-0596</div>`)[0];
+            popup_14dfde6e9d334f3e699d4bb9e3904c9f.setContent(html_07189dabceee0ecd25d5e24079578b63);
+        
+
+        marker_4618d44bd73337030dfbe675a96260d1.bindPopup(popup_14dfde6e9d334f3e699d4bb9e3904c9f)
+        ;
+
+        
+    
+    
+            marker_4618d44bd73337030dfbe675a96260d1.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7624b902b5db5117aebf0d78b9db313 = L.marker(
+                [40.7785, -73.98333],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_5924dc8b6b37a46a6bcfa1c88b1b1288 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e7624b902b5db5117aebf0d78b9db313.setIcon(icon_5924dc8b6b37a46a6bcfa1c88b1b1288);
+        
+    
+        var popup_c284565a5a65b9932109984d3459b395 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04fdaf516e6096d8c88ff905da607c43 = $(`<div id="html_04fdaf516e6096d8c88ff905da607c43" style="width: 100.0%; height: 100.0%;"><strong>Joseph’s Pharmacy</strong><br>216 W 72nd St, New York, NY 10023<br>212-875-1718</div>`)[0];
+            popup_c284565a5a65b9932109984d3459b395.setContent(html_04fdaf516e6096d8c88ff905da607c43);
+        
+
+        marker_e7624b902b5db5117aebf0d78b9db313.bindPopup(popup_c284565a5a65b9932109984d3459b395)
+        ;
+
+        
+    
+    
+            marker_e7624b902b5db5117aebf0d78b9db313.bindTooltip(
+                `<div>
+                     Joseph’s Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b22cf06bc193f71e01c88a01c534e60f = L.marker(
+                [40.77932, -73.98249],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_1688af4eb85ff7bc9bdcf9a97da947b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b22cf06bc193f71e01c88a01c534e60f.setIcon(icon_1688af4eb85ff7bc9bdcf9a97da947b3);
+        
+    
+        var popup_46e313dc8a19ed97844c783f1f9bee13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea6360864adf1a861a8df03a73af1660 = $(`<div id="html_ea6360864adf1a861a8df03a73af1660" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>2069 Broadway, New York, NY 10023<br>212-799-1067</div>`)[0];
+            popup_46e313dc8a19ed97844c783f1f9bee13.setContent(html_ea6360864adf1a861a8df03a73af1660);
+        
+
+        marker_b22cf06bc193f71e01c88a01c534e60f.bindPopup(popup_46e313dc8a19ed97844c783f1f9bee13)
+        ;
+
+        
+    
+    
+            marker_b22cf06bc193f71e01c88a01c534e60f.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2bc0b6af24f6cbaf92074fbbb6ceac70 = L.marker(
+                [40.78363, -73.9786],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_623fcc623504126b5fbf1b5e8163ad30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2bc0b6af24f6cbaf92074fbbb6ceac70.setIcon(icon_623fcc623504126b5fbf1b5e8163ad30);
+        
+    
+        var popup_f7da8d5b3d4fc879728332b2ddb69825 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20ecb191f0fe3c3e40b722bb068b488c = $(`<div id="html_20ecb191f0fe3c3e40b722bb068b488c" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>380 Amsterdam Ave, New York, NY 10024<br>212-579-7246</div>`)[0];
+            popup_f7da8d5b3d4fc879728332b2ddb69825.setContent(html_20ecb191f0fe3c3e40b722bb068b488c);
+        
+
+        marker_2bc0b6af24f6cbaf92074fbbb6ceac70.bindPopup(popup_f7da8d5b3d4fc879728332b2ddb69825)
+        ;
+
+        
+    
+    
+            marker_2bc0b6af24f6cbaf92074fbbb6ceac70.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28ad5989bc2e2a80e587cc03119e4811 = L.marker(
+                [40.73249, -73.98677],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_82f3d36d459ad8bc3b2d987f397a8ad4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_28ad5989bc2e2a80e587cc03119e4811.setIcon(icon_82f3d36d459ad8bc3b2d987f397a8ad4);
+        
+    
+        var popup_2ccd27c622584900d2768e3894765a21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7378a459f9f4356beac2eeb810c8f861 = $(`<div id="html_7378a459f9f4356beac2eeb810c8f861" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>123-133 3rd Ave, New York, NY 10003<br>212-529-7140</div>`)[0];
+            popup_2ccd27c622584900d2768e3894765a21.setContent(html_7378a459f9f4356beac2eeb810c8f861);
+        
+
+        marker_28ad5989bc2e2a80e587cc03119e4811.bindPopup(popup_2ccd27c622584900d2768e3894765a21)
+        ;
+
+        
+    
+    
+            marker_28ad5989bc2e2a80e587cc03119e4811.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_30a5da599d1c9c02a6d2e99866b4ac29 = L.marker(
+                [40.78752, -73.97518],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_8c8d89b1babb0875087f51b747d7c295 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_30a5da599d1c9c02a6d2e99866b4ac29.setIcon(icon_8c8d89b1babb0875087f51b747d7c295);
+        
+    
+        var popup_71e46b38e27e32ae02a82cc597ef4ea5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bc9c21499189da154668175209572a3 = $(`<div id="html_3bc9c21499189da154668175209572a3" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>540 Amsterdam Ave, New York, NY 10024<br>212-712-2821</div>`)[0];
+            popup_71e46b38e27e32ae02a82cc597ef4ea5.setContent(html_3bc9c21499189da154668175209572a3);
+        
+
+        marker_30a5da599d1c9c02a6d2e99866b4ac29.bindPopup(popup_71e46b38e27e32ae02a82cc597ef4ea5)
+        ;
+
+        
+    
+    
+            marker_30a5da599d1c9c02a6d2e99866b4ac29.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a488602b706d38dfca605dd6119f6f81 = L.marker(
+                [40.77723, -73.95542],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_ef09814787bbc79c791d267b9dd2eafc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a488602b706d38dfca605dd6119f6f81.setIcon(icon_ef09814787bbc79c791d267b9dd2eafc);
+        
+    
+        var popup_7cffc745abe27071028886cfbf030a25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5d2e27b3ebd5c896e41d5f3c1a35a08 = $(`<div id="html_f5d2e27b3ebd5c896e41d5f3c1a35a08" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy</strong><br>Between 81st & 82nd, New York, NY<br>212-249-5198</div>`)[0];
+            popup_7cffc745abe27071028886cfbf030a25.setContent(html_f5d2e27b3ebd5c896e41d5f3c1a35a08);
+        
+
+        marker_a488602b706d38dfca605dd6119f6f81.bindPopup(popup_7cffc745abe27071028886cfbf030a25)
+        ;
+
+        
+    
+    
+            marker_a488602b706d38dfca605dd6119f6f81.bindTooltip(
+                `<div>
+                     CVS Pharmacy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c6fa66b7ae302e339f780f14c4a37de = L.marker(
+                [40.77353, -73.95878],
+                {}
+            ).addTo(feature_group_728109b7e603824e94d4b7943450af73);
+        
+    
+            var icon_0f079003008b23bb982304dd8f18b3a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2c6fa66b7ae302e339f780f14c4a37de.setIcon(icon_0f079003008b23bb982304dd8f18b3a6);
+        
+    
+        var popup_9f5553f6214d53c53ae8322fb1734abf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_201a862c22f2f78d5ef7d666e1ed37ed = $(`<div id="html_201a862c22f2f78d5ef7d666e1ed37ed" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade</strong><br>1091 Lexington Ave, New York, NY 10075<br>212-794-7100</div>`)[0];
+            popup_9f5553f6214d53c53ae8322fb1734abf.setContent(html_201a862c22f2f78d5ef7d666e1ed37ed);
+        
+
+        marker_2c6fa66b7ae302e339f780f14c4a37de.bindPopup(popup_9f5553f6214d53c53ae8322fb1734abf)
+        ;
+
+        
+    
+    
+            marker_2c6fa66b7ae302e339f780f14c4a37de.bindTooltip(
+                `<div>
+                     Duane Reade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_feb60de890cdc983bbdb749fe748e536 = L.featureGroup(
+                {}
+            ).addTo(map_c112d95bc9c0f244ab7c025346b857c0);
+        
+    
+            var marker_76fb00854638fbeedc444dd854b988b4 = L.marker(
+                [40.78261, -73.95618],
+                {}
+            ).addTo(feature_group_feb60de890cdc983bbdb749fe748e536);
+        
+    
+            var icon_402e936b7027b22322d691560db079a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_76fb00854638fbeedc444dd854b988b4.setIcon(icon_402e936b7027b22322d691560db079a1);
+        
+    
+        var popup_d7c7aad293377d6c97178548e298f889 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30a5bf364a5805d27a36384295ffc542 = $(`<div id="html_30a5bf364a5805d27a36384295ffc542" style="width: 100.0%; height: 100.0%;"><strong>Duane Reade (Closed)</strong><br>1231 Madison Ave, New York, NY 10128<br>212-360-6586</div>`)[0];
+            popup_d7c7aad293377d6c97178548e298f889.setContent(html_30a5bf364a5805d27a36384295ffc542);
+        
+
+        marker_76fb00854638fbeedc444dd854b988b4.bindPopup(popup_d7c7aad293377d6c97178548e298f889)
+        ;
+
+        
+    
+    
+            marker_76fb00854638fbeedc444dd854b988b4.bindTooltip(
+                `<div>
+                     Duane Reade (Closed)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28ed0c56a9ca7912a68f82ea40d75ba1 = L.marker(
+                [40.77946, -73.95491],
+                {}
+            ).addTo(feature_group_feb60de890cdc983bbdb749fe748e536);
+        
+    
+            var icon_efb109ddd70509598d2266f12a9f9b96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_28ed0c56a9ca7912a68f82ea40d75ba1.setIcon(icon_efb109ddd70509598d2266f12a9f9b96);
+        
+    
+        var popup_ac1f2f04fe9b1f160f121098f4ff0c20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44d346dfbc560dd6fef9e8319e92026f = $(`<div id="html_44d346dfbc560dd6fef9e8319e92026f" style="width: 100.0%; height: 100.0%;"><strong>CVS Pharmacy (Closed)</strong><br>1241 Lexington Ave, New York, NY 10028<br>212-535-3438</div>`)[0];
+            popup_ac1f2f04fe9b1f160f121098f4ff0c20.setContent(html_44d346dfbc560dd6fef9e8319e92026f);
+        
+
+        marker_28ed0c56a9ca7912a68f82ea40d75ba1.bindPopup(popup_ac1f2f04fe9b1f160f121098f4ff0c20)
+        ;
+
+        
+    
+    
+            marker_28ed0c56a9ca7912a68f82ea40d75ba1.bindTooltip(
+                `<div>
+                     CVS Pharmacy (Closed)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            map_c112d95bc9c0f244ab7c025346b857c0.fitBounds(
+                [[40.75785, -73.96761], [40.75535, -73.97271], [40.75023, -73.98561], [40.76814, -73.96066], [40.78088, -73.95436], [40.77971, -73.95522], [40.78452, -73.95238], [40.77026, -73.95746], [40.76867, -73.95922], [40.77132, -73.94927], [40.7715, -73.94913], [40.79177, -73.94709], [40.7943, -73.94298], [40.78827, -73.94319], [40.78902, -73.97092], [40.79125, -73.97255], [40.7785, -73.98333], [40.77932, -73.98249], [40.78363, -73.9786], [40.73249, -73.98677], [40.78752, -73.97518], [40.77723, -73.95542], [40.78261, -73.95618], [40.77946, -73.95491], [40.77353, -73.95878]],
+                {}
+            );
+        
+    
+            var layer_control_b13ee8659bddae2030ceb9b4bf3fa5b7 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_b381476f340af16c0b310b418252c6c3,
+                },
+                overlays :  {
+                    "Open Pharmacies" : feature_group_728109b7e603824e94d4b7943450af73,
+                    "Closed Pharmacies" : feature_group_feb60de890cdc983bbdb749fe748e536,
+                },
+            };
+            L.control.layers(
+                layer_control_b13ee8659bddae2030ceb9b4bf3fa5b7.base_layers,
+                layer_control_b13ee8659bddae2030ceb9b4bf3fa5b7.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c112d95bc9c0f244ab7c025346b857c0);
+        
+</script>
+</html>
